@@ -1,0 +1,12 @@
+*~
+.DS_Store
+.*.sw[nop]
+Thumbs.db
+*.pyc
+*.suo
+obj/
+bin/
+Output/
+
+# git ls-files --others --exclude-from=.git/info/exclude
+# git ls-files --others --exclude-from=.gitignore
