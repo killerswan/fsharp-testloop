@@ -48,6 +48,10 @@ module Loop =
       runCmd "/usr/bin/mono" args
 
    let fs_nunit_dll dll =
+      // if this is triggered before the file is done changing we try to run anyways D:
+      // so wait a moment...
+      Async.RunSynchronously (Async.Sleep 7000)
+
       if (File.Exists(dll))
       then
          fs_nunit dll |> ignore
